@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
+import { UserAuth } from "@/context/AuthContext";
 
 const SignUp = () => {
   const [loading, setLoading] = useState(false);
@@ -10,6 +11,9 @@ const SignUp = () => {
   const [password, setPassword] = useState("");
 
   const [error, setError] = useState("");
+
+  const { session, signUpNewUser } = UserAuth();
+  console.log(session);
 
   return (
     <div>
