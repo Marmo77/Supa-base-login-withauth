@@ -155,6 +155,7 @@ const Login = ({ setSession, appleLogin }) => {
                       type="email"
                       placeholder="user@email.com"
                       value={formData.email}
+                      autoComplete="email webauthn"
                       onChange={(e) => handleOnChange(e)}
                       className="w-full px-4 py-2 pr-12 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 placeholder-gray-400/60 transition-all duration-200"
                       name="email"
@@ -172,6 +173,7 @@ const Login = ({ setSession, appleLogin }) => {
                       type={showPassword ? "text" : "password"}
                       placeholder="••••••••"
                       value={formData.password}
+                      autoComplete="current-password webauthn"
                       name="password"
                       onChange={(e) => handleOnChange(e)}
                       className="w-full px-4 py-2 pr-12 border border-gray-300 rounded-xl focus:outline-none text-gray-900 focus:ring-2 focus:ring-blue-500
