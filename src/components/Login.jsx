@@ -4,6 +4,9 @@ import { Link, useNavigate } from "react-router-dom";
 import { Eye, EyeOff, Mail, Apple, User } from "lucide-react";
 import { FaGithub, FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa";
 
+// this is schematic for great start of website with Logging/Signing Up with Supabase :D
+// Credits: github.com/Marmo77
+
 const Login = ({ setSession }) => {
   const [error, setError] = useState(null);
   const [showPassword, setShowPassword] = useState(false);
