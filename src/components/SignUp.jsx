@@ -5,9 +5,9 @@ import { Eye, EyeOff, Mail, Apple, User } from "lucide-react";
 import { FaGithub, FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa";
 
 // this is schematic for great start of website with Logging/Signing Up with Supabase :D
-// Credits: github.com/Marmo77
+// Credits: https://www.github.com/Marmo77
 
-const SignUp = () => {
+const SignUp = ({ appleLogin }) => {
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(null);
   const [showPassword, setShowPassword] = useState(false);
@@ -59,10 +59,6 @@ const SignUp = () => {
   const handleAppleSignIn = () => {
     // Apple sign in logic here
     console.log("Apple sign in clicked");
-  };
-  const handleForgotPassword = () => {
-    // Forgot password logic here
-    console.log("Forgot password clicked");
   };
 
   return (
@@ -137,29 +133,32 @@ const SignUp = () => {
 
               <div className="space-y-6">
                 {/* Apple Sign In Button */}
-                <button
-                  onClick={handleAppleSignIn}
-                  className="w-full flex items-center justify-center px-6 py-3 border border-gray-300 rounded-xl text-gray-700 bg-white hover:bg-gray-50 transition-all duration-200 shadow-sm hover:shadow-md"
-                  style={{ fontFamily: "Montserrat, sans-serif" }}
-                >
-                  <Apple className="w-5 h-5 mr-2" />
-                  Sign in with Apple
-                </button>
-
+                {appleLogin && (
+                  <button
+                    onClick={handleAppleSignIn}
+                    className="w-full flex items-center justify-center px-6 py-3 border border-gray-300 rounded-xl text-gray-700 bg-white hover:bg-gray-50 transition-all duration-200 shadow-sm hover:shadow-md"
+                    style={{ fontFamily: "Montserrat, sans-serif" }}
+                  >
+                    <Apple className="w-5 h-5 mr-2" />
+                    Sign in with Apple
+                  </button>
+                )}
                 {/* Divider */}
-                <div className="relative">
-                  <div className="absolute inset-0 flex items-center">
-                    <div className="w-full border-t border-gray-300"></div>
+                {appleLogin && (
+                  <div className="relative">
+                    <div className="absolute inset-0 flex items-center">
+                      <div className="w-full border-t border-gray-300"></div>
+                    </div>
+                    <div className="relative flex justify-center text-sm">
+                      <span
+                        className="px-4 bg-white text-gray-500"
+                        style={{ fontFamily: "Montserrat, sans-serif" }}
+                      >
+                        or
+                      </span>
+                    </div>
                   </div>
-                  <div className="relative flex justify-center text-sm">
-                    <span
-                      className="px-4 bg-white text-gray-500"
-                      style={{ fontFamily: "Montserrat, sans-serif" }}
-                    >
-                      or
-                    </span>
-                  </div>
-                </div>
+                )}
 
                 {/* Email Input */}
                 <form onSubmit={handleSubmit} className="flex flex-col gap-4">
@@ -216,8 +215,6 @@ const SignUp = () => {
                       )}
                     </span>
                   </div>
-
-                  {/* Forgot Password */}
 
                   {/* Login Button */}
                   <button

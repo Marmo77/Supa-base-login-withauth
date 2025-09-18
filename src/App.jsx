@@ -44,7 +44,9 @@ function App() {
       {/* If user has session, redirect to home. If not, show signup */}
       <Route
         path="/sign-up"
-        element={session ? <Navigate to="/" replace /> : <SignUp />}
+        element={
+          session ? <Navigate to="/" replace /> : <SignUp appleLogin={false} />
+        }
       />
 
       {/* If user has session, redirect to home. If not, show login */}
@@ -54,7 +56,7 @@ function App() {
           session ? (
             <Navigate to="/" replace />
           ) : (
-            <Login setSession={setSession} />
+            <Login setSession={setSession} appleLogin={false} />
           )
         }
       />
