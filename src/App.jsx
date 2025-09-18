@@ -5,7 +5,6 @@ import { supabase } from "./lib/supabase";
 import SignUp from "./components/SignUp";
 import Login from "./components/Login";
 import Home from "./components/Home";
-import Base from "./components/Base";
 
 function App() {
   const [session, setSession] = useState(null);
