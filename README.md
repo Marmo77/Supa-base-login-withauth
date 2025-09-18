@@ -35,7 +35,7 @@ _Built for developers who demand both beauty and functionality_
 | 📱 **Mobile-First Design**   | Fully responsive across all devices                | ✅ Ready |
 | 🎨 **Modern UI/UX**          | Clean, intuitive interface with smooth transitions | ✅ Ready |
 | ⚡ **Lightning Fast**        | Powered by Vite for instant development            | ✅ Ready |
-| 🏠 **Dashboard Ready**       | Basic user profile page included                   | ✅ Ready |
+| 🏠 **Dashboard Ready**       | User Home Page with Dashboard                      | ✅ Ready |
 
 > You can find the code on [GitHub](https://github.com/Marmo77/Supa-base-login-withauth).
 
@@ -57,10 +57,10 @@ _Login Interface_
 ![Sign Up Interface](./public/register.jpg)
 _Sign Up Interface_
 
-### 🏡 **Basic Home Page**
+### 🏡 **Home Page**
 
-![Homepage](./public/homepage.jpg)
-_Basic Home Page only for verification if it's working_
+![Homepage](./public/newhomepage.jpg)
+_VibeCoded Home Page with Static informations in [] or UseStates([...])_
 
 ### 📱 **Mobile Responsivness**
 
